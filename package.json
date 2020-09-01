@@ -1,0 +1,50 @@
+{
+  "name": "yandexdiploma",
+  "version": "1.0.0",
+  "description": "Дипломная работа Яндекс.Практикум",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Throwzy/YandexDiploma.git"
+  },
+  "author": " <Vladyslav Lopanov throwzy@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Throwzy/YandexDiploma/issues"
+  },
+  "homepage": "https://github.com/Throwzy/YandexDiploma#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "autoprefixer": "^9.8.6",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.2.2",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^4.4.1",
+    "mini-css-extract-plugin": "^0.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^3.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "gh-pages": "^3.1.0",
+    "path": "^0.12.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-md5-hash": "0.0.6"
+  }
+}
