@@ -1,3 +1,13 @@
-# YandexDiploma
-Дипломная работа Яндекс.Практикум
-https://throwzy.github.io/YandexDiploma/
+# Дипломная работа студента (Yandex.Практикум Beб-разработчик)
+## Задачи:
+* Создание новостного портала "Что в мире творится?".
+## Технологии использованные при создании проекта: CSS, HTML , GIT, Webpack, Babel , Javascript.
+### Автор работы:
+* Vladyslav Lopanov
+### Версия:
+* 1.0.0 (stable)
+[Ссылка на готовый проект](https://throwzy.github.io/YandexDiploma/)
+### Инструкция к запуску:
+* Клонировать репозиторий
+* Запустить npm run build
+* открыть index.html
