@@ -1,0 +1,12 @@
+.header__title {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 107%;
+    color: #FFFFFF;
+    max-width: 547px;
+    max-height: 128px;
+    margin-top: 80px;
+    margin-bottom: 0;
+}
