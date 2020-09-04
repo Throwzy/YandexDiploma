@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Что в мире твориться?</title>
+    <link rel="stylesheet" href="./preloader.css">
 </head>
 <body class="body">
 <section class="root">
@@ -13,17 +14,54 @@
         <div class="header__menu">
             <p class="header__menu-logo">NewsAnalyzer</p>
             <div class="header__menu-container">
-                <p class="header__menu-main">Главная</p>
-                <p class="header__menu-about">О проекте</p>
+                <button class="button header__menu-main header__menu_active">Главная</button>
+                <button class="button header__menu-about">О проекте</button>
             </div>
         </div>
         <h1 class="header__title">Что в мире творится?</h1>
         <p class="header__description">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
         <form class="header__search">
             <input type="text" placeholder="Введите тему новости" class="header__search-text">
-            <button type="submit"  class="header__search-button" disabled>Искать</button>
+            <button type="submit"  class="button header__search-button" disabled>Искать</button>
         </form>
     </header>
+    <section class="preloader is-hidden">
+    <div class="preloader__container">
+        <div class="preloader__circle"></div>
+        <p class="preloader__info">Идет поиск новостей...</p>
+    </div>
+    </section>
+    <section class="not-found is-hidden">
+    <div class="not-found__container">
+        <img class="not-found__image" src="<%=require('./images/not-found_v1.png').default%>">
+        <p class="not-found__error">Ничего не найдено</p>
+        <p class="not-found__error-description">К сожалению по вашему запросу ничего не найдено.</p>
+    </div>
+    </section>
+    <section class="author">
+        <div class="author__container">
+            <img alt="Profile pic" src="<%=require('./images/image-03.png').default%>" class="author__profile-image">
+            <div class="author__info">
+                <h2 class="author__title">Об авторе</h2>
+                <div class="author__info-splitter">
+                    <p class="author__description">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+                    <p class="author__description">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="footer__copyright">&copy;2019 Supersite</p>
+        <div class="footer__button-container">
+            <button class="button footer__button">Главная</button>
+            <button class="button footer__button">О проекте</button>
+            <button class="button footer__button">Яндекс.Практикум</button>
+        </div>
+        <div class="footer__icons">
+            <img class="footer__icons-github" src="<%=require('./images/Vector.png').default%>">
+            <img class="footer__icons-facebook" src="<%=require('./images/Vector2.png').default%>">
+        </div>
+    </footer>
 </section>
 </body>
 </html>

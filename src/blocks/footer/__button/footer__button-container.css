@@ -1,0 +1,6 @@
+.footer__button-container {
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    max-width: 406px;
+}

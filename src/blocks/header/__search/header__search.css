@@ -3,4 +3,8 @@
     align-items: center;
     position: relative;
     margin-top: 64px;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin-bottom: 80px;
 }
