@@ -9,4 +9,10 @@
     align-items: center;
     text-align: center;
     color: #B6BCBF;
+    transition: ease 1s;
+    cursor: pointer;
+}
+
+.header__menu-about:hover {
+    color: #FFFFFF;
 }

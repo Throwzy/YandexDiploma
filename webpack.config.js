@@ -32,7 +32,7 @@ module.exports = {
             canPrint: true
         }),
         new HTMLwebpackPlugin({
-            template: "./index.html"
+            template: './index.html'
         }),
         new CleanWebpackPlugin(),
         new webpack.DefinePlugin({

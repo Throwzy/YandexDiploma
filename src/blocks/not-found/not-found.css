@@ -1,0 +1,11 @@
+@import url(./__image/not-found__image.css);
+@import url(./__error/not-found__error.css);
+@import url(./__error/not-found__error-description.css);
+@import url(./__container/not-found__container.css);
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    min-height: 374px;
+    background: #F5F6F7;
+}
