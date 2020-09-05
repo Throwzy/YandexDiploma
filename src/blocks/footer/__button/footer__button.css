@@ -6,4 +6,7 @@
     line-height: 133%;
     text-align: center;
     color: #1A1B22;
+    padding-left: 6px;
+    padding-right: 6px;
+    cursor: pointer;
 }

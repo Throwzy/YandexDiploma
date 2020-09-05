@@ -1,0 +1,9 @@
+.search-result__paragraph {
+    margin: 0;
+    font-family: Roboto Slab, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 115%;
+    color: #1A1B22;
+}

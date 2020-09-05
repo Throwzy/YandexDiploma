@@ -1,0 +1,8 @@
+.search-result__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 80px;
+    margin-bottom: 64px;
+}
