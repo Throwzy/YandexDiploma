@@ -1,0 +1,30 @@
+.header__search-button {
+    background: #2F71E5;
+    box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
+    border-radius: 100px;
+    min-width: 168px;
+    min-height: 64px;
+    position: absolute;
+    right: 0;
+    border-color: #2F71E5;
+    border-style: none;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding-left: 9%;
+    cursor: pointer;
+}
+
+.header__search-button:hover {
+    background: #347EFF;
+}
+
+.header__search-button:active {
+    background: #2A65CC;
+}

@@ -1,0 +1,12 @@
+.footer__button {
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: #1A1B22;
+    padding-left: 6px;
+    padding-right: 6px;
+    cursor: pointer;
+}

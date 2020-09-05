@@ -1,0 +1,21 @@
+@import url(__container/search-result__container.css);
+@import url(__paragraph/search-result__paragraph.css);
+@import url(__analytics/search-result__analytics.css);
+@import url(__cards/search-result__cards.css);
+@import url(__card/search-result__card.css);
+@import url(__date/search-result__date.css);
+@import url(__card-title/search-result__card-title.css);
+@import url(__card-paragraph/search-result__card-paragraph.css);
+@import url(__image/search-result__image.css);
+@import url(__extend-button/search-result__extend-button.css);
+@import url(__wrap-box/search-result__wrap-box.css);
+
+.search-result {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #F5F6F7;
+    padding-bottom: 204px;
+}
