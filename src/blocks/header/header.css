@@ -5,10 +5,14 @@
 @import url(./__menu/header__menu-about.css);
 @import url(./__title/header__title.css);
 @import url(./__description/header__description.css);
+@import url(./__container/header__container.css);
 @import url(./__search/header__search.css);
 @import url(./__search/header__search-text.css);
 @import url(./__search/header__search-button.css);
 @import url(./__menu/header__menu_active.css);
+@import url(./__menu/header__menu-black.css);
+@import url(./__menu/header__menu_acitve-black.css);
+@import url(__menu/header__menu-black-edition.css);
 
 
 
@@ -17,7 +21,7 @@
     max-height: 576px;
     display: flex;
     flex-direction: column;
-    background-image: url(/images/georgia.png);
+    /*background-image: url(/images/georgia.png);*/
     background-size: cover;
     align-items: center;
 }

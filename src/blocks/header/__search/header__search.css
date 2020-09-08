@@ -7,4 +7,7 @@
     box-sizing: border-box;
     border-radius: 50px;
     margin-bottom: 80px;
+    max-width: 608px;
+    margin-left: auto;
+    margin-right: auto;
 }

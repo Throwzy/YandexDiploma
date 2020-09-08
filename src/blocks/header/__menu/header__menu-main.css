@@ -1,6 +1,6 @@
 .header__menu-main {
     margin-right: 34px;
-    font-family: Roboto;
+    font-family: Roboto,serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -10,4 +10,6 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 0;
+    cursor: pointer;
+    text-decoration: none;
 }

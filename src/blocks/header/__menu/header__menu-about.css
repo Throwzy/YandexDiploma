@@ -11,6 +11,7 @@
     color: #B6BCBF;
     transition: ease 1s;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .header__menu-about:hover {

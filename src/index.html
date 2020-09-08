@@ -6,15 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Что в мире твориться?</title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
+    <script type="module" src="<%= htmlWebpackPlugin.files.js %>" defer></script>
 </head>
 <body class="body">
 <section class="root">
     <header class="header">
+        <div class="header__container">
         <div class="header__menu">
             <p class="header__menu-logo">NewsAnalyzer</p>
             <div class="header__menu-container">
-                <button class="button header__menu-main header__menu_active">Главная</button>
-                <button class="button header__menu-about">О проекте</button>
+                <a href="./index.html" class="button header__menu-main header__menu_active">Главная</a>
+                <a href="./about.html" class="button header__menu-about">О проекте</a>
             </div>
         </div>
         <h1 class="header__title">Что в мире творится?</h1>
@@ -23,6 +26,7 @@
             <input type="text" placeholder="Введите тему новости" class="header__search-text">
             <button type="submit"  class="button header__search-button" disabled>Искать</button>
         </form>
+        </div>
     </header>
     <section class="preloader is-hidden">
     <div class="preloader__container">
@@ -41,7 +45,7 @@
         <div class="search-result__wrap-box">
         <div class="search-result__container">
             <p class="search-result__paragraph">Результаты поиска</p>
-            <a class="search-result__analytics">Посмотреть&nbsp;аналитику</a>
+            <a class="button search-result__analytics">Посмотреть&nbsp;аналитику</a>
         </div>
         <ul class="search-result__cards">
             <li class="search-result__card">
