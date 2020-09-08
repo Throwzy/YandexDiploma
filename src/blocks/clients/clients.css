@@ -1,8 +1,0 @@
-@import url(__title/clients__title.css);
-@import url(__description/clients__description.css);
-
-.clients {
-    background: #FFFFFF;
-    min-width: 100%;
-    min-height: 702px;
-}

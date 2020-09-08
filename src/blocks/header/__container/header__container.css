@@ -1,8 +1,0 @@
-.header__container {
-    min-width: 100%;
-    background-image: url(/images/georgia.png);
-    background-size: cover;
-    max-height: 576px;
-    align-items: center;
-    justify-content: center;
-}
