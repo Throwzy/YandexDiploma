@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Что в мире твориться?</title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
+    <script type="module" src="<%= htmlWebpackPlugin.files.js %>" defer></script>
+</head>
+<body class="body">
+<section class="root">
+    <header class="header">
+        <div class="header__container">
+        <div class="header__menu">
+            <p class="header__menu-logo">NewsAnalyzer</p>
+            <div class="header__menu-container">
+                <a href="./index.html" class="button header__menu-main header__menu_active">Главная</a>
+                <a href="./about.html" class="button header__menu-about">О проекте</a>
+            </div>
+        </div>
+        <h1 class="header__title">Что в мире творится?</h1>
+        <p class="header__description">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+        <form class="header__search">
+            <input type="text" placeholder="Введите тему новости" class="header__search-text">
+            <button type="submit"  class="button header__search-button" disabled>Искать</button>
+        </form>
+        </div>
+    </header>
+    <section class="preloader is-hidden">
+    <div class="preloader__container">
+        <div class="preloader__circle"></div>
+        <p class="preloader__info">Идет поиск новостей...</p>
+    </div>
+    </section>
+    <section class="not-found is-hidden">
+    <div class="not-found__container">
+        <img class="not-found__image" src="<%=require('./images/not-found_v1.png').default%>">
+        <p class="not-found__error">Ничего не найдено</p>
+        <p class="not-found__error-description">К сожалению по вашему запросу ничего не найдено.</p>
+    </div>
+    </section>
+    <section class="search-result">
+        <div class="search-result__wrap-box">
+        <div class="search-result__container">
+            <p class="search-result__paragraph">Результаты поиска</p>
+            <a class="button search-result__analytics">Посмотреть&nbsp;аналитику</a>
+        </div>
+        <ul class="search-result__cards">
+            <li class="search-result__card">
+                <img alt="Фото новости" class="search-result__image" src="<%=require('./images/image_08.png').default%>">
+                <p class="search-result__date">2 августа, 2019</p>
+                <h3 class="search-result__card-title">Национальное достояние – парки</h3>
+                <p class="search-result__card-paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
+                    где и сегодня каждый может приобщиться к природе.</p>
+            </li>
+            <li class="search-result__card">
+                <img alt="Фото новости" class="search-result__image" src="<%=require('./images/image_04.png').default%>">
+                <p class="search-result__date">2 августа, 2019</p>
+                <h3 class="search-result__card-title">Лесные огоньки: история одной фотографии</h3>
+                <p class="search-result__card-paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+            </li>
+            <li class="search-result__card">
+                <img alt="Фото новости" class="search-result__image" src="<%=require('./images/image_07.png').default%>">
+                <p class="search-result__date">2 августа, 2019</p>
+                <h3 class="search-result__card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                <p class="search-result__card-paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            </li>
+        </ul>
+        <button type="button" class="search-result__extend-button">Показать еще</button>
+        </div>
+    </section>
+    <section class="author">
+        <div class="author__container">
+            <img alt="Profile pic" src="<%=require('./images/image-03.png').default%>" class="author__profile-image">
+            <div class="author__info">
+                <h2 class="author__title">Об авторе</h2>
+                <div class="author__info-splitter">
+                    <p class="author__description">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+                    <p class="author__description">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="footer__copyright">&copy;2019 Supersite</p>
+        <div class="footer__button-container">
+            <a class="button footer__button">Главная</a>
+            <a class="button footer__button">О проекте</a>
+            <a class="button footer__button">Яндекс.Практикум</a>
+        </div>
+        <div class="footer__icons">
+            <img class="footer__icons-github" src="<%=require('./images/Vector.png').default%>">
+            <img class="footer__icons-facebook" src="<%=require('./images/Vector2.png').default%>">
+        </div>
+    </footer>
+</section>
+</body>
+</html>
