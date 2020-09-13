@@ -6,9 +6,9 @@
 
 .technology {
     display: flex;
-    min-width: 100%;
     padding-left: 104px;
     background: #F5F6F7;
     min-height: 334px;
     flex-wrap: wrap;
+    justify-content: center;
 }

@@ -9,6 +9,7 @@
 @import url(__image/search-result__image.css);
 @import url(__extend-button/search-result__extend-button.css);
 @import url(__wrap-box/search-result__wrap-box.css);
+@import url(__media-sponsor/search-result__media-sponsor.css);
 
 .search-result {
     position: relative;

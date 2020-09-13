@@ -1,6 +1,6 @@
 .header__menu-about {
     margin-right: 101px;
-    font-family: Roboto;
+    font-family: Roboto, serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -12,8 +12,4 @@
     transition: ease 1s;
     cursor: pointer;
     text-decoration: none;
-}
-
-.header__menu-about:hover {
-    color: #FFFFFF;
 }

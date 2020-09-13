@@ -1,5 +1,7 @@
 .author__profile-image {
-    max-height: 464px;
+    display: block;
+    width: 43%;
     max-width: 464px;
     margin-right: 56px;
+    align-self: flex-start;
 }

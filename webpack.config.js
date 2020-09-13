@@ -14,15 +14,16 @@ module.exports = {
     mode: 'development',
     entry: {
         main: ['@babel/polyfill', './js/index.js'],
-        about: ['@babel/polyfill', './js/about.js']
+        about: ['@babel/polyfill', './js/about.js'],
+        analytics: ['@babel/polyfill', './js/analytics.js']
     },
     output: {
-        filename: "[name].[hash].js",
+        filename: "./js/[name].[hash].js",
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: './css/[name].[contenthash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
@@ -38,12 +39,17 @@ module.exports = {
             chunks: ['main'],
             filename: 'index.html'
         }),
-
         new HtmlWebpackPlugin({
             inject: false,
             template: './about.html',
             chunks: ['about'],
             filename: 'about.html',
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './analytics.html',
+            chunks: ['analytics'],
+            filename: 'analytics.html',
         }),
         new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
@@ -60,6 +66,7 @@ module.exports = {
                         importLoaders: 2,
                         hmr: isDev,
                         reloadAll: true,
+                        publicPath: '../',
                     },
                 },
                 'css-loader'
@@ -67,7 +74,7 @@ module.exports = {
         },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
             },
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,

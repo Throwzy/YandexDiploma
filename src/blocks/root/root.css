@@ -1,6 +1,6 @@
 .root {
     min-width: 100%;
-    min-height: 1080px;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
 }

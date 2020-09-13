@@ -1,0 +1,8 @@
+.header__menu-grey {
+    color: #B6BCBF;
+}
+
+.header__menu-grey:hover {
+    color: black;
+    transition: 1s ease;
+}

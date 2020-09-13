@@ -1,0 +1,30 @@
+.commits__item-box {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 136px;
+}
+
+.commits__item-box:before {
+    background: linear-gradient(270deg,rgba(245,246,247,0),#f5f6f7);
+    left: 0;
+    content: "";
+    width: 108px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.commits__item-box:after {
+    background: linear-gradient(90deg,rgba(245,246,247,0),#f5f6f7);
+    right: 0;
+    content: "";
+    width: 108px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}

@@ -1,0 +1,21 @@
+.commits__github-link {
+    font-family: Roboto,serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #1A1B22;
+    cursor: pointer;
+}
+
+.commits__github-link:after {
+    content: " ";
+    background-image: url(https://i.imgur.com/F7LBnr9.png);
+    width: 8px;
+    height: 13px;
+    color: #1A1B22;
+    margin-left: 10px;
+}

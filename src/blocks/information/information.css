@@ -1,0 +1,26 @@
+@import url(__box/information__box.css);
+@import url(__title/information__title.css);
+@import url(__callouts-mark/information__callouts-mark.css);
+@import url(__date-mark/information__date-mark.css);
+@import url(__container/information__container.css);
+@import url(__amount-box/information__amount-box.css);
+@import url(__amount/information__amount.css);
+@import url(__amount/information__amount-container.css);
+@import url(__chart-container/information__chart-container.css);
+@import url(__chart-list/information__chart-list.css);
+@import url(__date/information__date.css);
+@import url(__bar/information__bar.css);
+@import url(__bar-counter/information__bar-counter.css);
+@import url(__position-box/information__position-box.css);
+@import url(__amount-box/information__amount-box_no-padding.css);
+
+
+.information {
+    background: #F5F6F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 555px;
+    padding-bottom: 80px;
+}

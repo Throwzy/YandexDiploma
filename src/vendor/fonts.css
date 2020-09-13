@@ -2,26 +2,26 @@
     font-family: 'Roboto';
     font-style: Normal;
     font-weight: 400;
-    src: url("../vendor/fonts/roboto-regular.woff") format("woff");
+    src: url("fonts/roboto-regular.woff") format("woff");
 }
 
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    src: url("../vendor/fonts/roboto-medium.woff") format("woff");
+    src: url("fonts/roboto-medium.woff") format("woff");
 }
 
 @font-face {
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 400;
-    src: url("../vendor/fonts/robotoslab-regular.woff") format("woff");
+    src: url("fonts/robotoslab-regular.woff") format("woff");
 }
 
 @font-face {
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
-    src: url("../vendor/fonts/sourcesanspro-regular.woff") format("woff");
+    src: url("fonts/sourcesanspro-regular.woff") format("woff");
 }

@@ -1,0 +1,7 @@
+.information__position-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-left: 104px;
+    min-width: 80%;
+}

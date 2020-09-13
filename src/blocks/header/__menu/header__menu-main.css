@@ -12,4 +12,5 @@
     margin-bottom: 0;
     cursor: pointer;
     text-decoration: none;
+    transition: ease 1s;
 }
