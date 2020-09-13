@@ -1,5 +1,5 @@
 .information__box {
-    min-width: 100%;
+    max-width: 1329px;
     display: flex;
     flex-direction: row;
     box-shadow: inset 0 -1px 0 black;
