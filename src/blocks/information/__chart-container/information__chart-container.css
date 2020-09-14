@@ -1,0 +1,5 @@
+.information__chart-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}

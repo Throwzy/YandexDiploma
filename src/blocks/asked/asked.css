@@ -1,0 +1,16 @@
+@import url(__analytics-link/asked__analytics-link.css);
+@import url(__main-link/asked__main-link.css);
+@import url(__nav-box/asked__nav-box.css);
+@import url(__slash/asked__slash.css);
+@import url(__title/asked__title.css);
+@import url(__weekly-box/asked__weekly-box.css);
+@import url(__weekly-names/asked__weekly-names.css);
+@import url(__weekly-names/asked__weekly-names-counter.css);
+@import url(__weekly-posts/asked__weekly-posts.css);
+@import url(__weekly-posts/asked__weekly-posts-counter.css);
+
+.asked {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+}

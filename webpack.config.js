@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const HTMLwebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const webpackDevServer = require('webpack-dev-server');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -13,15 +13,17 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: 'development',
     entry: {
-        main: ['@babel/polyfill', './index.js'],
+        main: ['@babel/polyfill', './js/index.js'],
+        about: ['@babel/polyfill', './js/about.js'],
+        analytics: ['@babel/polyfill', './js/analytics.js']
     },
     output: {
-        filename: "bundle.[hash].js",
-        path: path.resolve(__dirname, 'dist')
+        filename: "./js/[name].[hash].js",
+        path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: './css/[name].[contenthash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
@@ -31,8 +33,23 @@ module.exports = {
             },
             canPrint: true
         }),
-        new HTMLwebpackPlugin({
-            template: "./index.html"
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './index.html',
+            chunks: ['main'],
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './about.html',
+            chunks: ['about'],
+            filename: 'about.html',
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './analytics.html',
+            chunks: ['analytics'],
+            filename: 'analytics.html',
         }),
         new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
@@ -43,13 +60,21 @@ module.exports = {
         rules: [{
             test: /\.css$/i,
             use: [
-                (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                'css-loader',
+                {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        importLoaders: 2,
+                        hmr: isDev,
+                        reloadAll: true,
+                        publicPath: '../',
+                    },
+                },
+                'css-loader'
             ]
         },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
             },
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,

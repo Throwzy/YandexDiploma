@@ -1,0 +1,21 @@
+@import url(__container/commits__container.css);
+@import url(__title/commits__title.css);
+@import url(__github-link/commits__github-link.css);
+@import url(__item-box/commits__item-box.css);
+@import url(__item/commits__item.css);
+@import url(__date/commits__date.css);
+@import url(__profile-box/commits__profile-box.css);
+@import url(__profile-picture/commits__profile-picture.css);
+@import url(__name-box/commits__name-box.css);
+@import url(__name/commits__name.css);
+@import url(__email/commits__email.css);
+@import url(__text/commits__text.css);
+@import url(__slider-control/commits__slider-control-left.css);
+@import url(__slider-control/commits__slider-control-right.css);
+
+.commits {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #F5F6F7;
+}

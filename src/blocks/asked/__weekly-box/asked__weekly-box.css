@@ -1,0 +1,5 @@
+.asked__weekly-box {
+    display: flex;
+    flex-direction: row;
+    padding-left: 104px;
+}

@@ -1,0 +1,14 @@
+.header__description {
+    font-family: Roboto,serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 133%;
+    color: #FFFFFF;
+    max-width: 545px;
+    max-height: 48px;
+    margin-top: 32px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}

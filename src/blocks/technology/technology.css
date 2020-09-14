@@ -1,0 +1,14 @@
+@import url(__title/technology__title.css);
+@import url(__container/technology__container.css);
+@import url(__item/technology__item.css);
+@import url(__item/technology__item-logo.css);
+@import url(__item/technology__item-name.css);
+
+.technology {
+    display: flex;
+    padding-left: 104px;
+    background: #F5F6F7;
+    min-height: 334px;
+    flex-wrap: wrap;
+    justify-content: center;
+}

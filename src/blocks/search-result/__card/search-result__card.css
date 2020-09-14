@@ -1,0 +1,8 @@
+.search-result__card {
+    position: relative;
+    display: block;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    margin-left: 16px;
+}

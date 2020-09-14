@@ -1,0 +1,5 @@
+.technology__item {
+    max-height: 153px;
+    display: flex;
+    flex-direction: column;
+}
