@@ -1,0 +1,5 @@
+@import url(../search/__background/search__background.css);
+test {
+    font-size: 60px;
+    border: 1px solid red;
+}

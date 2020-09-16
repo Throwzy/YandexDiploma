@@ -1,0 +1,491 @@
+@import url(../blocks/header/header.css);
+@import url(../blocks/root/root.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/preloader/preloader.css);
+@import url(../blocks/not-found/not-found.css);
+@import url(../blocks/is-hidden/is-hidden.css);
+@import url(../blocks/author/author.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/body/body.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/search-result/search-result.css);
+@import url(../blocks/clients/clients.css);
+@import url(../blocks/technology/technology.css);
+@import url(../blocks/commits/commits.css);
+@import url(../blocks/asked/asked.css);
+@import url(../blocks/information/information.css);
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 873px){
+    .footer__icons {
+        padding-right: 20px;
+    }
+    .footer__copyright {
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-result__card-paragraph {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow-y: hidden;
+        -webkit-line-clamp: 4;
+    }
+    .search-result__extend-button {
+        left: 33%;
+    }
+    .header__menu-logo {
+        margin-left: 24px;
+    }
+    .header__menu-about {
+        margin-right: 42px;
+    }
+    .header__title {
+        font-size: 36px;
+        max-width: 385px;
+        margin-left: 8%;
+    }
+    .header__description {
+        max-width: 452px;
+    }
+    .header__search {
+        max-width: 448px;
+    }
+    .header__search-text {
+        min-width: 452px;
+    }
+    .header__search-button {
+        right: -4px;
+        text-align: center;
+        padding-left: 12%;
+    }
+    .search-result {
+        padding-left: 10px;
+        padding-right: 15px;
+    }
+    .search-result__card-title {
+        font-size: 22px;
+    }
+    .author__title {
+        margin-top: 0;
+    }
+    .clients__title {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .clients__description {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .technology {
+        flex-direction: column;
+        padding-left: 40px;
+    }
+    .technology__title {
+        margin: 0;
+        margin-top: 40px;
+    }
+    .technology__container {
+        flex-wrap: nowrap;
+        margin-top: 40px;
+        padding-right: 40px;
+    }
+    .technology__item {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .technology__item-name {
+        width: 100%;
+    }
+    .author__description {
+        margin: 0;
+    }
+    .author__profile-image {
+        margin-right: 20px;
+    }
+    .author__container {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .commits__item {
+        max-width: 320px;
+        max-height: 242px;
+    }
+    .commits__item-box::before {
+        width: 0%;
+    }
+    .commits__item-box::after {
+        width: 0%;
+    }
+    .commits__slider-control-right {
+             display: none;
+    }
+    .commits__slider-control-left {
+        display: none;
+    }
+    .commits__title {
+        font-size: 30px;
+        max-width: 336px;
+    }
+    .commits__container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .commits__github-link {
+        padding-bottom: 29px;
+    }
+    .asked__main-link {
+        padding-left: 40px;
+    }
+    .asked__title {
+        padding-left: 40px;
+    }
+    .asked__weekly-box {
+        padding-left: 40px;
+    }
+    .information__position-box {
+        margin-left: 0;
+        max-width: 685px;
+        padding-left: 40px;
+    }
+    .information__amount-container {
+        max-width: 100%;
+        margin-left: 0;
+    }
+    .information__amount-box {
+        max-width: 768px;
+        padding-left: 133px;
+    }
+    .information__callouts-mark {
+        min-width: 30%;
+    }
+}
+
+@media screen and (max-width: 321px){
+    .header__menu {
+        max-height: 50px;
+    }
+    .header__menu-logo {
+        margin-left: 10px;
+        margin-top: 9px;
+        font-size: 16px;
+    }
+    .header__menu-main {
+        margin: 0;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .header__menu-about {
+        margin: 0;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    .header__container {
+        max-width: 100%;
+    }
+    .header__title {
+        margin-left: 10px;
+    }
+    .header__description {
+        margin-left: 10px;
+    }
+    .header__menu-container {
+        max-width: 53%;
+    }
+    .header__search {
+        margin-left: 0;
+    }
+    .header__search-text {
+        padding: 0;
+        min-width: 302px;
+        padding-left: 66px;
+    }
+    .header__search-button {
+        min-width: 302px;
+        right: 1px;
+        top: 70px;
+        align-items: center;
+        padding-left: 40%;
+    }
+    .search-result__container {
+        max-width: 302px;
+        margin: 0;
+        padding-top: 32px;
+    }
+    .search-result__paragraph {
+        font-size: 30px;
+        max-width: 288px;
+    }
+    .search-result__cards {
+        flex-wrap: wrap;
+    }
+    .search-result__analytics {
+        padding-bottom: 36px;
+    }
+    .search-result__card {
+       margin-left: 5px;
+        margin-bottom: 10px;
+    }
+    .search-result__extend-button {
+        left: 4%;
+    }
+    .search-result {
+        padding-bottom: 129px;
+    }
+    .author {
+    flex-direction: column;
+    }
+    .author__container {
+        padding: 0;
+        flex-wrap: wrap;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    .author__profile-image {
+        width: 86%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .author__title {
+        font-size: 30px;
+        margin-left: 16px;
+        margin-top: 24px;
+    }
+    .author__description {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .footer {
+        position: relative;
+        flex-direction: column-reverse;
+    }
+    .footer__button-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 16px;
+    }
+    .footer__button {
+        margin-bottom: 10px;
+    }
+    .footer__copyright {
+        padding-left: 16px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+    .footer__icons {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        padding: 0;
+        padding-right: 16px;
+    }
+    .footer__button-container {
+        min-width: 0;
+    }
+    .clients__title {
+        font-size: 30px;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .clients__description {
+        padding-left: 16px;
+    }
+    .technology__title {
+        font-size: 30px;
+    }
+    .technology {
+        padding-left: 16px;
+    }
+    .technology__container {
+        max-width: 302px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-right: 16px;
+        padding-bottom: 20px;
+    }
+    .technology__item {
+        margin: 0;
+    }
+    .commits__title {
+        font-size: 30px;
+        padding-bottom: 20px;
+        padding: 0;
+    }
+    .commits__container {
+        padding-left: 16px;
+        flex-wrap: wrap;
+    }
+    .commits__github-link::after {
+        display: none;
+    }
+    .commits__github-link {
+        position: absolute;
+        bottom: 27px;
+        border: 1px solid #1A1B22;
+        box-sizing: border-box;
+        border-radius: 80px;
+        min-width: 276px;
+        padding-bottom: 9px;
+        padding-top: 9px;
+        padding-left: 59px;
+    }
+    .commits__item-box {
+        padding-bottom: 129px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .commits__item {
+        max-width: 235px;
+        max-height: 247px;
+    }
+    .commits__name {
+        font-size: 20px;
+        max-width: 200px;
+    }
+    .asked__title {
+        padding-left: 16px;
+        font-size: 30px;
+        max-width: 288px;
+    }
+    .asked__nav-box {
+        display: none;
+    }
+    .asked__weekly-box {
+        padding-left: 16px;
+    }
+    .asked__weekly-names {
+        padding-bottom: 24px;
+    }
+    .information__amount-box {
+        display: none;
+    }
+    .information__bar {
+        margin-left: 17px;
+    }
+    .information__date-mark {
+        padding-right: 59px;
+    }
+    .information__position-box {
+        padding-left: 16px;
+    }
+}
+
+@media screen and (max-width: 686px){
+    .search-result__cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .search-result__card {
+        margin-bottom: 10px;
+    }
+    .search-result__extend-button{
+    left: 30%;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    .header__menu {
+        max-height: 50px;
+    }
+    .header__menu-logo {
+        margin-left: 10px;
+        margin-top: 9px;
+        font-size: 16px;
+    }
+    .header__menu-main {
+        margin: 0;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .header__menu-about {
+        margin: 0;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    .footer {
+        position: relative;
+        flex-direction: column-reverse;
+    }
+    .footer__button-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 16px;
+    }
+    .footer__button {
+        margin-bottom: 10px;
+    }
+    .footer__copyright {
+        padding-left: 16px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+    .footer__icons {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        padding: 0;
+        padding-right: 16px;
+    }
+    .footer__button-container {
+        min-width: 0;
+    }
+    .header__search-text {
+        min-width: 98%;
+    }
+    .header__search-button {
+        padding-right: 0;
+        padding-left: 14%;
+    }
+    .header__search-button {
+        right: 4px;
+    }
+    .search-result__extend-button {
+        left: 2%;
+    }
+    .header__container {
+        max-width: 100%;
+    }
+    .technology__container {
+        max-width: 302px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-right: 16px;
+        padding-bottom: 20px;
+    }
+    .technology__item {
+        margin: 0;
+    }
+    .technology__title {
+        font-size: 30px;
+    }
+    .technology {
+        padding-left: 40px;
+    }
+    .information__amount-container {
+        display: none;
+    }
+    .asked__title {
+        padding-left: 16px;
+        font-size: 30px;
+        max-width: 288px;
+    }
+    .asked__nav-box {
+        display: none;
+    }
+    .asked__weekly-box {
+        padding-left: 16px;
+    }
+    .asked__weekly-names {
+        padding-bottom: 24px;
+    }
+}

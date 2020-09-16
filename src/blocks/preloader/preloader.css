@@ -1,0 +1,10 @@
+@import url(./__info/preloader__info.css);
+@import url(./__circle/preloader__circle.css);
+
+.preloader {
+    display: flex;
+    min-height: 282px;
+    background-color: #F5F6F7;
+    justify-content: center;
+    position: relative;
+}

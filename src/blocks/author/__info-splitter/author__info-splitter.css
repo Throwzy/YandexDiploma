@@ -1,0 +1,5 @@
+.author__info-splitter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

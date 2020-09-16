@@ -1,0 +1,4 @@
+.commits__profile-box {
+    display: flex;
+    flex-direction: row;
+}

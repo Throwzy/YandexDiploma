@@ -1,0 +1,7 @@
+.search-result__cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-between;
+}

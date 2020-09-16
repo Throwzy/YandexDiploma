@@ -1,0 +1,22 @@
+.search-result__analytics {
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    display: flex;
+    color: #1A1B22;
+    padding-top: 13px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-result__analytics:after {
+    content: " ";
+    background-image: url(https://i.imgur.com/F7LBnr9.png);
+    width: 8px;
+    height: 13px;
+    color: #1A1B22;
+    margin-left: 10px;
+    margin-top: 5px;
+}
