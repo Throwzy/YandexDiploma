@@ -1,0 +1,32 @@
+.swiper-wrapper {
+    padding-bottom: 136px;
+    position: relative;
+}
+
+.swiper-wrapper:after {
+    background: linear-gradient(90deg,rgba(245,246,247,0),#f5f6f7);
+    right: 0;
+}
+
+.swiper-wrapper:after {
+    content: "";
+    width: 88px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.swiper-wrapper:before {
+    background: linear-gradient(270deg,rgba(245,246,247,0),#f5f6f7);
+    left: 0;
+}
+
+.swiper-wrapper:before {
+    content: "";
+    width: 88px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
