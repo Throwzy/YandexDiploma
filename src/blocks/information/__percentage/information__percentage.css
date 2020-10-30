@@ -1,0 +1,16 @@
+.information__percentage {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto,serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 133%;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-left: 35px;
+    margin-top: 0;
+    margin-bottom: 34px;
+    max-height: 552px;
+}

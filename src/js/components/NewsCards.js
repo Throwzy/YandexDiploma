@@ -16,9 +16,14 @@ export default class NewsCards {
 
     }
     sliceArray(data) {
+        if (data !== null) {
             let removed = data.splice(0,3);
             this.render(removed);
             localStorage.setItem('news', JSON.stringify(data));
             return data
+        }
+        else {
+            return false
+        }
     }
 }

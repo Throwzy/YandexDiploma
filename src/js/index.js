@@ -115,6 +115,7 @@ function fetchInput() {
             const getStorage = localStorage.getItem('news');
             newsCards.sliceArray(JSON.parse(getStorage));
             searchIsHidden.classList.remove('is-hidden');
+            showMoreNews.classList.remove('is-hidden');
         }
     })
 }
@@ -129,7 +130,7 @@ searchButton.addEventListener('click', function(event) {
 })
 
 function documentReady() {
-    if (localStorage.getItem('news') !== '[]') {
+    if (localStorage.getItem('news') !== '[]' && localStorage.getItem('news') !== null) {
         searchIsHidden.classList.remove('is-hidden');
         const getStorage = localStorage.getItem('news');
         newsCards.sliceArray(JSON.parse(getStorage));
@@ -153,22 +154,9 @@ function dataChanger() {
     const changedDate = dayNumber + monthChanger[monthNumber] + yearNumber;
     return changedDate
 }
-// let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// let counter = 0;
-//
-// function showMore(event) {
-//     event.preventDefault();
-//     hide();
-//     let i = 0;
-//     for (let i = 0; i < 3; i++) {
-//         console.log(testArray[i]);
-//
-//     }
-// }
-//
+
 showMoreNews.addEventListener('click', function () {
     const getStorage = localStorage.getItem('news');
-    console.log(getStorage);
     if (getStorage === '[]') {
         showMoreNews.classList.add('is-hidden');
     }
@@ -176,5 +164,4 @@ showMoreNews.addEventListener('click', function () {
         newsCards.sliceArray(JSON.parse(getStorage));
     }
 });
-
 

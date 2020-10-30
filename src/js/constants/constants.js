@@ -1,3 +1,16 @@
-export const LOCAL_STORAGE_DATE = "news";
-export const GRAPH_DATE = document.querySelector(".information__chart-list");
-export const REQUEST = document.querySelector(".header__search-text");
+export const MONTHS_LIST_ALALYTICS = {
+    '0': "январь",
+    '1': "февраль",
+    '2': "март",
+    '3': "апрель",
+    '4': "май",
+    '5': "июнь",
+    '6': "июль",
+    '7': "август",
+    '8': "сентябрь",
+    '9': "октябрь",
+    '10': "ноябрь",
+    '11': "декабрь"
+}
+
+export const month = document.querySelector('.information__date-mark');

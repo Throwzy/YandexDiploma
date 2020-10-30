@@ -1,0 +1,9 @@
+.percenrage-meter {
+    height: 24px;
+    background-color: #2F71E5;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 5px;
+}

@@ -1,0 +1,12 @@
+.information__days {
+    list-style-type: none;
+    padding: 0;
+    font-family: Roboto,serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 444%;
+    color: #1A1B22;
+    width: 104px;
+    padding-top: 10px;
+}
