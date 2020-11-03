@@ -22,35 +22,35 @@ export default class Statistics {
     }
 
     getCurrentDate() {
-        let newsArray = this.sortMyData();
-        let findDay = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] [new Date().getDay()];
-        let findDate = new Date(newsArray[0].publishedAt).getDate();
-        let maxDate = findDate + ', ' + findDay;
+        const newsArray = this.sortMyData();
+        const findDay = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] [new Date().getDay()];
+        const findDate = new Date(newsArray[0].publishedAt).getDate();
+        const maxDate = findDate + ', ' + findDay;
         return maxDate
     }
 
     getSortedDates() {
-        let newsArray = this.sortMyData();
+        const newsArray = this.sortMyData();
         for (let i = 0; i < newsArray.length; i++) {
-            let findDay = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] [new Date(newsArray[i].publishedAt).getDay()];
-            let findDate = new Date(newsArray[i].publishedAt).getDate();
-            let maxDate = findDate + ', ' + findDay;
+            const findDay = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] [new Date(newsArray[i].publishedAt).getDay()];
+            const findDate = new Date(newsArray[i].publishedAt).getDate();
+            const maxDate = findDate + ', ' + findDay;
             newsArray[i].publishedAt = maxDate;
         }
-        let newsArraySorted = newsArray;
+        const newsArraySorted = newsArray;
         return newsArraySorted;
     }
 
     getFilteredDates(day) {
-        let findDay = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] [new Date(new Date() - day * 24 * 3600 * 1000).getDay()];
-        let findDate = new Date(new Date() - day * 24 * 3600 * 1000).getDate();
-        let dayPlusDate = findDate + ', ' + findDay;
+        const findDay = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] [new Date(new Date() - day * 24 * 3600 * 1000).getDay()];
+        const findDate = new Date(new Date() - day * 24 * 3600 * 1000).getDate();
+        const dayPlusDate = findDate + ', ' + findDay;
         return dayPlusDate;
     }
 
     getDates() {
-        let dateArray = [];
-        let dateMax = this.getCurrentDate();
+        const dateArray = [];
+        const dateMax = this.getCurrentDate();
         for (let i = 1; i <= 6; i++) {
             dateArray.unshift(this.getFilteredDates(i));
         }
@@ -59,7 +59,7 @@ export default class Statistics {
     }
 
     getFilteredArray() {
-        let datesArray = this.getDates();
+        const datesArray = this.getDates();
         const getInitObject = function(array) {
             return array.reduce((acc,current) => {
                 acc[current] = [];
@@ -71,8 +71,8 @@ export default class Statistics {
     }
 
     getNewsArray() {
-        let array = this.getSortedDates();
-        let dateObj = this. getFilteredArray();
+        const array = this.getSortedDates();
+        const dateObj = this. getFilteredArray();
         for (let key in dateObj) {
             for (let i = 0; i < array.length; i++) {
                 if (key === array[i].publishedAt) {
@@ -84,8 +84,8 @@ export default class Statistics {
     }
 
     mentionCounter() {
-        let data = JSON.parse(localStorage.getItem(this.storageData));
-        let keyWord = localStorage.getItem('inputStorage');
+        const data = JSON.parse(localStorage.getItem(this.storageData));
+        const keyWord = localStorage.getItem('inputStorage');
         let counter = 0;
         const regexp = new RegExp(`${keyWord}`,`gi`);
         data.map((item) => item.title).forEach((elem) => {
@@ -97,13 +97,13 @@ export default class Statistics {
     }
 
     // keyWordRenew() {
-    //     let data = JSON.parse(localStorage.getItem(this.storageData));
+    //     const data = JSON.parse(localStorage.getItem(this.storageData));
     // }
 
     setMonth() {
         function getMonth() {
-            let month = new Date();
-            let options = {
+            const month = new Date();
+            const options = {
                 month: 'long',
             };
             return month.toLocaleString('ru', options)
@@ -112,17 +112,17 @@ export default class Statistics {
     }
 
     setDaysCell() {
-        let dates = this.getDates();
+        const dates = this.getDates();
         for (let i = 0; i < 7; i++) {
             this.daysDateCell.children[i].textContent = dates[i];
         }
     }
 
     countAnalytics() {
-        let keyWord = localStorage.getItem('inputStorage');
-        let mentionsArray = [];
+        const keyWord = localStorage.getItem('inputStorage');
+        const mentionsArray = [];
         const regexp = new RegExp(`${keyWord}`,`gi`);
-        let weekArray = this.getNewsArray();
+        const weekArray = this.getNewsArray();
         for (let day in weekArray) {
             let counter = 0;
             weekArray[day].map((item) => item.title).forEach((elem) => {
@@ -145,13 +145,13 @@ export default class Statistics {
     }
 
     renderAnalytics() {
-        let mentionsArray = this.countAnalytics();
+        const mentionsArray = this.countAnalytics();
         for (let i = 0; i < mentionsArray.length; i++) {
             this.infoPercentage.children[i].textContent = mentionsArray[i];
             if (mentionsArray[i] !== 0) {
-                let widthPC = 11.3 * mentionsArray.length;
-                let widthPad = 5.5 * mentionsArray[i];
-                let widthPhone = 1.86 * mentionsArray[i];
+                const widthPC = 11.3 * mentionsArray.length;
+                const widthPad = 5.5 * mentionsArray[i];
+                const widthPhone = 1.86 * mentionsArray[i];
                 this.infoPercentage.children[i].style.width = `${widthPC}px`;
                 if ('screen and (min-width: 768px) and (max-width: 1250px)') {
                     this.infoPercentage.children[i].style.width = `${widthPad}px`;

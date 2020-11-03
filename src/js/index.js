@@ -3,9 +3,7 @@ import Api from './modules/Api';
 import FormValidator from './components/FormValidator.js';
 import NewsCards from "./components/NewsCards";
 import Card from "./components/Card";
-import DataChanger from "./components/DataChanger";
 import monthChanger from "./constants/monthChanger";
-import CommitCard from "./components/CommitCard";
 
 const notFound = document.querySelector('.not-found');
 const preloader = document.querySelector('.preloader');
@@ -32,10 +30,11 @@ const MONTHSCHANGER = {
     '12': "декабря"
 }
 
-const url = 'http://newsapi.org/v2/everything?' +
+const url = 'https://nomoreparties.co/news/v2/everything' +
     'q=${newsInput.value}&' +
     'from=2020-09-16&' +
     'sortBy=popularity&' +
+    'pageSize=100' +
     'apiKey=e532ea55bc1a4c099c61138e50d15465';
 const api = new Api(url);
 
@@ -50,20 +49,20 @@ function handleInput() {
 function checkInput() {
     return  validator.setButtonStatus(validator.checkInputValidity(newsInput,spanError))
 }
-let date = new Date();
-let sevenDaysAgo = date.getDate() -7;
-let today = date.getDate();
+const date = new Date();
+const sevenDaysAgo = date.getDate() -7;
+const today = date.getDate();
 function myDate(day){
     let dd = day;
     let mm = date.getMonth()+1;
-    let yyyy = date.getFullYear();
+    const yyyy = date.getFullYear();
     if(dd<10){
         dd='0'+dd
     }
     if(mm<10){
         mm='0'+mm
     }
-    let newDate = yyyy+'-'+mm+'-'+dd;
+    const newDate = yyyy+'-'+mm+'-'+dd;
 
     return newDate;
 }
@@ -83,7 +82,7 @@ function createNews(object) {
 const newsCards = new NewsCards(newsContainer,createNews)
 
 function sliceArray(array) {
-    let slicedArray = array.slice(0,2);
+    const slicedArray = array.slice(0,2);
     return slicedArray
 }
 
@@ -91,8 +90,8 @@ function fetchInput() {
     preloader.classList.remove('is-hidden');
     notFound.classList.add('is-hidden');
     const apiKey = 'e532ea55bc1a4c099c61138e50d15465'
-    let topic = newsInput.value;
-    let url = `https://newsapi.org/v2/everything?q=${topic}&from=${myDate(sevenDaysAgo)}&to=${myDate(today)}&sortBy=popularity&apiKey=${apiKey}`
+    const topic = newsInput.value;
+    const url = `https://newsapi.org/v2/everything?q=${topic}&from=${myDate(sevenDaysAgo)}&to=${myDate(today)}&sortBy=popularity&pageSize=100&apiKey=${apiKey}`
     fetch(url).then((res) => {
         if (res.ok) {
             preloader.classList.add('is-hidden');
@@ -102,6 +101,8 @@ function fetchInput() {
             return res.json();
         }
     }).then((data) => {
+        console.log(data)
+        console.log(data.totalResults)
         if (data.totalResults === 0) {
             searchIsHidden.classList.add('is-hidden');
             notFound.classList.remove('is-hidden');
@@ -118,6 +119,11 @@ function fetchInput() {
             showMoreNews.classList.remove('is-hidden');
         }
     })
+        .catch((err) => {
+            console.log(err);
+            preloader.classList.add('is-hidden');
+            notFound.classList.remove('is-hidden');
+        })
 }
 searchButton.addEventListener('click', function(event) {
     event.preventDefault()

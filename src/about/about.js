@@ -1,8 +1,6 @@
 import '../pages/index.css';
-import Swiper, { Navigation, Pagination } from 'swiper';
 import CommitCard from "../js/components/CommitCard";
 import CommitCardList from "../js/components/CommitCardList";
-import Flickity from 'flickity';
 const MONTHSCHANGER = {
     '01': "января",
     '02': "февраля",
@@ -24,14 +22,14 @@ const commitList = new CommitCardList(makeCommits,commitContainer);
 function myDate(day){
     let dd = day;
     let mm = date.getMonth()+1;
-    let yyyy = date.getFullYear();
+    const yyyy = date.getFullYear();
     if(dd<10){
         dd='0'+dd
     }
     if(mm<10){
         mm='0'+mm
     }
-    let newDate = yyyy+'-'+mm+'-'+dd;
+    const newDate = yyyy+'-'+mm+'-'+dd;
 
     return newDate;
 }
@@ -57,11 +55,14 @@ function getCommits() {
         }
     }).then((data) => {
         commitList.render(data)
-        let swiper = new Flickity( slider, {
+        const swiper = new Flickity( slider, {
             // options
             cellAlign: 'center',
             contain: true
         })
     })
+        .catch((err) => {
+            console.log(err);
+        })
 }
 getCommits()
