@@ -10,10 +10,11 @@
 @import url(__extend-button/search-result__extend-button.css);
 @import url(__wrap-box/search-result__wrap-box.css);
 @import url(__media-sponsor/search-result__media-sponsor.css);
+@import url(__cards/search-result__cards-link.css);
+@import url(_hidden/search-result_hidden.css);
 
 .search-result {
     position: relative;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;

@@ -4,5 +4,10 @@
     color: red;
     position: absolute;
     top: -25px;
-    left: 31px;
+    left: 35px;
+    font-family: Roboto,serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 133%;
 }

@@ -13,6 +13,10 @@
 @import url(__bar-counter/information__bar-counter.css);
 @import url(__position-box/information__position-box.css);
 @import url(__amount-box/information__amount-box_no-padding.css);
+@import url(__days/day.css);
+@import url(__days/information__days.css);
+@import url(__percentage/information__percentage.css);
+@import url(__percentage/percenrage-meter.css);
 
 
 .information {

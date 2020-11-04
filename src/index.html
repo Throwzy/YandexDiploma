@@ -24,9 +24,9 @@
         <h1 class="header__title">Что в мире творится?</h1>
         <p class="header__description">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
         <form class="header__search">
+            <input id="inputStorage" type="text" value="" placeholder="Введите тему новости" class="header__search-text">
             <span id="header__error" class="header__error"></span>
-            <input type="text" placeholder="Введите тему новости" class="header__search-text">
-            <button type="submit"  class="button header__search-button">Искать</button>
+            <button type="submit"  class="button header__search-button" >Искать</button>
         </form>
         </div>
     </header>
@@ -43,35 +43,23 @@
         <p class="not-found__error-description">К сожалению по вашему запросу ничего не найдено.</p>
     </div>
     </section>
-    <section class="search-result">
+    <section class="search-result is-hidden">
         <div class="search-result__wrap-box">
         <div class="search-result__container">
             <p class="search-result__paragraph">Результаты поиска</p>
             <a href="./analytics.html" class="button search-result__analytics">Посмотреть&nbsp;аналитику</a>
         </div>
         <ul class="search-result__cards">
-            <li class="search-result__card">
-                <img alt="Фото новости" class="search-result__image" src="<%=require('./images/image_08.png').default%>">
-                <p class="search-result__date">2 августа, 2019</p>
-                <h3 class="search-result__card-title">Национальное достояние – парки</h3>
-                <p class="search-result__card-paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-                    где и сегодня каждый может приобщиться к природе.</p>
-                <p class="search-result__media-sponsor">Лента.ру</p>
-            </li>
-            <li class="search-result__card">
-                <img alt="Фото новости" class="search-result__image" src="<%=require('./images/image_04.png').default%>">
-                <p class="search-result__date">2 августа, 2019</p>
-                <h3 class="search-result__card-title">Лесные огоньки: история одной фотографии</h3>
-                <p class="search-result__card-paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                <p class="search-result__media-sponsor">Медуза</p>
-            </li>
-            <li class="search-result__card">
-                <img alt="Фото новости" class="search-result__image" src="<%=require('./images/image_07.png').default%>">
-                <p class="search-result__date">2 августа, 2019</p>
-                <h3 class="search-result__card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                <p class="search-result__card-paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                <p class="search-result__media-sponsor">риа</p>
-            </li>
+<!--            <template class="template">-->
+<!--            <li class="search-result__card">-->
+<!--                <img alt="Фото новости" class="search-result__image" src="<%=require('./images/image_08.png').default%>">-->
+<!--                <p class="search-result__date">2 августа, 2019</p>-->
+<!--                <h3 class="search-result__card-title">Национальное достояние – парки</h3>-->
+<!--                <p class="search-result__card-paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,-->
+<!--                    где и сегодня каждый может приобщиться к природе.</p>-->
+<!--                <p class="search-result__media-sponsor">Лента.ру</p>-->
+<!--            </li>-->
+<!--            </template>-->
         </ul>
         <button type="button" class="search-result__extend-button">Показать еще</button>
         </div>
@@ -101,5 +89,7 @@
         </div>
     </footer>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </body>
 </html>

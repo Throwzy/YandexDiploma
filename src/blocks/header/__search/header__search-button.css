@@ -20,6 +20,7 @@
     padding-left: 9%;
     cursor: pointer;
     z-index: 3;
+    outline: none;
 }
 
 .header__search-button:hover {

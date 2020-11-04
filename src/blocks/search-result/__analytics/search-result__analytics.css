@@ -9,6 +9,7 @@
     padding-top: 13px;
     cursor: pointer;
     text-decoration: none;
+    padding-right: 60px;
 }
 
 .search-result__analytics:after {

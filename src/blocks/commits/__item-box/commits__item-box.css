@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: center;
     padding-bottom: 136px;
+    min-width: 0;
 }
 
 .commits__item-box:before {

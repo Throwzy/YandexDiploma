@@ -1,0 +1,11 @@
+.search-result__cards-link {
+    height: 100%;
+    display: inherit;
+    flex-direction: inherit;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 16px;
+    background-color: #fff;
+    overflow: hidden;
+    object-fit: cover;
+}

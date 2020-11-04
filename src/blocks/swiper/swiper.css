@@ -1,0 +1,32 @@
+ .swiper {
+
+ }
+
+ .flickity-page-dots {
+     bottom: 102px;
+ }
+
+ .flickity-button {
+     z-index: 2;
+     background: #333;
+ }
+ .flickity-button:hover {
+     background: #F90;
+ }
+
+ .flickity-prev-next-button {
+     z-index: 2;
+     width: 40px;
+     height: 40px;
+     border-radius: 40px;
+ }
+ /* icon color */
+ .flickity-button-icon {
+     fill: white;
+     position: absolute;
+     left: 68.39%;
+     right: -2.23%;
+     top: 22.05%;
+     bottom: 22.05%;
+ }
+ /* position outside */

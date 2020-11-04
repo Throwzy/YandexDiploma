@@ -6,8 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Что в мире твориться?</title>
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
     <link rel="favicon" href="<%=require('./images/Group.png').default%>">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
     <script type="module" src="<%= htmlWebpackPlugin.files.js %>" ></script>
 </head>
 <body class="body">
@@ -67,98 +69,10 @@
             <h3 class="commits__title">История коммитов из GitHub</h3>
             <a href="https://github.com" class="commits__github-link">Открыть в Github</a>
         </div>
-        <div class="commits__item-box">
-            <div class="commits__item">
-                <p class="commits__date">14 августа, 2019</p>
-                <div class="commits__profile-box">
-                    <img class="commits__profile-picture" src="<%=require('./images/image-01.png').default%>" alt="Фото профиля">
-                    <div class="commits__name-box">
-                        <p class="commits__name">Антон Долинин</p>
-                        <p class="commits__email">anton@yandex.ru</p>
-                    </div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
                 </div>
-                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-            </div>
-            <div class="commits__item">
-                <p class="commits__date">14 августа, 2019</p>
-                <div class="commits__profile-box">
-                    <img class="commits__profile-picture" src="<%=require('./images/image-01.png').default%>" alt="Фото профиля">
-                    <div class="commits__name-box">
-                        <p class="commits__name">Антон Долинин</p>
-                        <p class="commits__email">anton@yandex.ru</p>
-                    </div>
-                </div>
-                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-            </div>
-            <div class="commits__item">
-                <p class="commits__date">14 августа, 2019</p>
-                <div class="commits__profile-box">
-                    <img class="commits__profile-picture" src="<%=require('./images/image-01.png').default%>" alt="Фото профиля">
-                    <div class="commits__name-box">
-                        <p class="commits__name">Антон Долинин</p>
-                        <p class="commits__email">anton@yandex.ru</p>
-                    </div>
-                </div>
-                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-            </div>
-            <div class="commits__item">
-                <p class="commits__date">14 августа, 2019</p>
-                <div class="commits__profile-box">
-                    <img class="commits__profile-picture" src="<%=require('./images/image-01.png').default%>" alt="Фото профиля">
-                    <div class="commits__name-box">
-                        <p class="commits__name">Антон Долинин</p>
-                        <p class="commits__email">anton@yandex.ru</p>
-                    </div>
-                </div>
-                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-            </div>
-            <div class="commits__item">
-                <p class="commits__date">14 августа, 2019</p>
-                <div class="commits__profile-box">
-                    <img class="commits__profile-picture" src="<%=require('./images/image-01.png').default%>" alt="Фото профиля">
-                    <div class="commits__name-box">
-                        <p class="commits__name">Антон Долинин</p>
-                        <p class="commits__email">anton@yandex.ru</p>
-                    </div>
-                </div>
-                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-            </div>
-            <div class="commits__item">
-                <p class="commits__date">14 августа, 2019</p>
-                <div class="commits__profile-box">
-                    <img class="commits__profile-picture" src="<%=require('./images/image-01.png').default%>" alt="Фото профиля">
-                    <div class="commits__name-box">
-                        <p class="commits__name">Антон Долинин</p>
-                        <p class="commits__email">anton@yandex.ru</p>
-                    </div>
-                </div>
-                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-            </div>
-            <div class="commits__item">
-                <p class="commits__date">14 августа, 2019</p>
-                <div class="commits__profile-box">
-                    <img class="commits__profile-picture" src="<%=require('./images/image-01.png').default%>" alt="Фото профиля">
-                    <div class="commits__name-box">
-                        <p class="commits__name">Антон Долинин</p>
-                        <p class="commits__email">anton@yandex.ru</p>
-                    </div>
-                </div>
-                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-            </div>
-            <div class="commits__item">
-                <p class="commits__date">14 августа, 2019</p>
-                <div class="commits__profile-box">
-                    <img class="commits__profile-picture" src="<%=require('./images/image-01.png').default%>" alt="Фото профиля">
-                    <div class="commits__name-box">
-                        <p class="commits__name">Антон Долинин</p>
-                        <p class="commits__email">anton@yandex.ru</p>
-                    </div>
-                </div>
-                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-            </div>
-        </div>
-        <img class="commits__slider-control-left" src="<%=require('./images/slider-control.png').default%>" alt="кнопка слайдера">
-        <img class="commits__slider-control-right" src="<%=require('./images/slider-control-right.png').default%>" alt="кнопка слайдера">
     </section>
     <footer class="footer">
         <p class="footer__copyright">&copy;2019 Supersite</p>

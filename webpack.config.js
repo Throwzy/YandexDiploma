@@ -14,8 +14,8 @@ module.exports = {
     mode: 'development',
     entry: {
         main: ['@babel/polyfill', './js/index.js'],
-        about: ['@babel/polyfill', './js/about.js'],
-        analytics: ['@babel/polyfill', './js/analytics.js']
+        about: ['@babel/polyfill', './about/about.js'],
+        analytics: ['@babel/polyfill', './analytics/analytics.js']
     },
     output: {
         filename: "./js/[name].[hash].js",
