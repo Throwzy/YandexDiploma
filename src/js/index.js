@@ -91,7 +91,7 @@ function fetchInput() {
     notFound.classList.add('is-hidden');
     const apiKey = 'e532ea55bc1a4c099c61138e50d15465'
     const topic = newsInput.value;
-    const url = `https://newsapi.org/v2/everything?q=${topic}&from=${myDate(sevenDaysAgo)}&to=${myDate(today)}&sortBy=popularity&pageSize=100&apiKey=${apiKey}`
+    const url = `https://nomoreparties.co/news/v2/everything?q=${topic}&from=${myDate(sevenDaysAgo)}&to=${myDate(today)}&sortBy=popularity&pageSize=100&apiKey=${apiKey}`
     fetch(url).then((res) => {
         if (res.ok) {
             preloader.classList.add('is-hidden');
